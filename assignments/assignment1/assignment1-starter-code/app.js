@@ -6,7 +6,7 @@ angular.module('MenuApp', [])
 
 MenuController.$inject = ['$scope'];
 function MenuController($scope) {
-  $scope.msg = "msg";
+  $scope.msg = "";
   $scope.items = "";
 
   $scope.checkIfTooMuch = function () {
