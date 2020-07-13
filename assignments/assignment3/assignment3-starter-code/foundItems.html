@@ -1,0 +1,8 @@
+<h3>List of Menu Categories</h3>
+<ol>
+  <li ng-repeat="item in menu.items">
+    ({{ item.short_name }}) - {{ item.name }} - {{item.description}}
+    <button ng-click="menu.onRemove({index: $index});">Don't want this one!</button>
+  </li>
+</ol>
+<div class="error" ng-if="menu.nothingFound()">Nothing found</div>
