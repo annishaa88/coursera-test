@@ -1,0 +1,20 @@
+<div class="container" ng-if="myinfo.user">
+  <div class="row">
+    <div class="col-sm-5">
+      <div class="menu-item-photo">
+        <div>{{myinfo.user.numenumber}}</div>
+        <img class="img-responsive" width="250" height="150" ng-src="{{myinfo.basePath}}/images/{{myinfo.user.numenumber}}.jpg" alt="{{myinfo.user.numenumber}}">
+      </div>
+    </div>
+    <div class="menu-item-description col-sm-7">
+      <h3 class="menu-item-title">{{myinfo.user.firstname}} {{myinfo.user.lastname}}</h3>
+      <p class="menu-item-details">{{myinfo.user.phone}} {{myinfo.user.email}}</p>
+      <p class="menu-item-details">{{myinfo.menuitem.name}} </p>
+      <p class="menu-item-details">{{myinfo.menuitem.description}}</p>
+    </div>
+  </div>
+  <hr class="visible-xs">
+</div>
+<div class="container" ng-if="!myinfo.user">
+  Not Signed Up Yet. <a href="#" ui-sref="public.signup"> Sign up Now! </a>
+</div>
